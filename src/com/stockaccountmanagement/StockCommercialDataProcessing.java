@@ -3,7 +3,6 @@ package com.stockaccountmanagement;
 import java.io.FileReader;
 import java.util.Iterator;
 import java.util.Scanner;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -51,6 +50,7 @@ public class StockCommercialDataProcessing {
 
 		System.out.println("Select the stock to buy:");
 		JSONArray stocks = read();
+		@SuppressWarnings("unchecked")
 		Iterator<JSONObject> itr = stocks.iterator();
 		int count = 1;
 		while (itr.hasNext()) {
